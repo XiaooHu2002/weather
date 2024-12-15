@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.weather">
+
+    <!--    和风天气-->
+    <!--允许连接网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
+    <!--访问设备状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--访问WIFI状态-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!--    定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".Mapp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Weather.NoActionBar"
+        tools:targetApi="31">
+
+        <!--        首页-->
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--        未来天气页面-->
+        <activity
+            android:name=".ui.WeatherFutureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+        <!--        城市收藏页面-->
+        <activity
+            android:name=".ui.CityCollectionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+        <!--        城市列表页面-->
+        <activity
+            android:name=".ui.CitiesActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

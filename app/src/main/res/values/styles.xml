@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MaskDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--背景-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>
